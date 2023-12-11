@@ -29,5 +29,6 @@ The sample data has been included in the "Table Data" folder, containing 14 rows
 
 ## Additional Sections
 
-If it is at all helpful, I have also provided a folder containing SQL text in regards to each table. The folder is called "Table SQL files"
+- If it is at all helpful, I have also provided a folder containing SQL text in regards to each table. The folder is called "Table SQL files"
+- in case this read me cannot be opened through Github, I will be adding it to my file as well.
 
