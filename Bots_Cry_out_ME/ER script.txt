@@ -1,0 +1,67 @@
+Table Prayer {
+  Prayer_ID integer [primary key]
+  prompt varChar
+  body varchar
+  Scriptures varchar
+  tags varchar
+  num_likes integer
+  num_saves integer 
+  cover_image varchar
+  Audio_recitation varchar
+  Human_Creator varchar //foreign key
+  AI_Creator varchar //foreign key 
+}
+
+Table Users {
+  User_ID integer [primary key]
+  name_ varchar
+  prayers_created integer
+  num_prayers_liked integer
+}
+
+Table likes {
+  Like_ID integer [PRIMARY KEY]
+  User_ID integer //foerign key
+  Prayer_ID integer //foreign key
+  Time_stamp timestamp
+  
+}
+
+Table saves {
+  Save_ID integer [PRIMARY KEY]
+  User_ID integer //foreign key
+  Prayer_ID integer //foreign key
+  Time_stamp timestamp
+}
+
+Table AICreators{
+  Ai_CreatorID integer [primary KEY ]
+  Ai_Creator varChar
+
+}
+
+TABLE PrayerUserAssociation {
+    AssociationID INT [PRIMARY KEY]
+    Prayer_ID INT //foreign key
+    User_ID INT //foreign key
+  
+}
+
+Ref: likes.User_ID > Users.User_ID // many-to-one
+
+Ref: likes.Prayer_ID >  Prayer.Prayer_ID // many-to-one
+
+Ref: saves.User_ID > Users.User_ID // many-to-one
+
+Ref: saves.Prayer_ID >  Prayer.Prayer_ID // many-to-one
+
+Ref: AICreators.Ai_Creator >  Prayer.AI_Creator // many-to-one
+
+Ref: Users.name_ > Prayer.Human_Creator // many-to-one
+
+Ref:  PrayerUserAssociation.User_ID <> Users.User_ID // many-to-many
+
+Ref:  PrayerUserAssociation.Prayer_ID <> Prayer.Prayer_ID // many-to-many
+
+
+
