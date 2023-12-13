@@ -10,7 +10,7 @@
 - [Additional Sections](#additional-sections)
 
 ## Getting Started
-thank you more taking your time to review my project !
+thank you for taking your time to review my project !
 
 ### Prerequisites
 
@@ -22,7 +22,7 @@ The main use of my project is to create a database that holds data on prayers li
 
 ## Database Structure
 
-My main scruture in an ER diagram, which is labeled "ER Diagram". I have provided a script along with it that contain notes on the keys, and the cardinalities of the data.
+My main scructure is an ER diagram, which is labeled "ER Diagram". I have provided a script along with it that contain notes on the keys, and the cardinalities of the data.
 
 ## Sample Data
 The sample data has been included in the "Table Data" folder, containing 14 rows of sample data for each table. 
